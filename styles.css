@@ -45,7 +45,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
 header.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 82%, transparent); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
 .nav .wrap { display: flex; align-items: center; gap: 20px; height: 62px; }
 .brand { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 800; font-size: 18px; }
-.brand .mark { width: 27px; height: 27px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; color: #fff; }
+.brand-icon { width: 28px; height: 28px; border-radius: 7px; display: block; }
 .nav nav { margin-left: auto; display: flex; gap: 24px; align-items: center; }
 .nav nav a { color: var(--ink-soft); font-size: 15px; font-weight: 500; }
 .nav nav a:hover { color: var(--ink); }
