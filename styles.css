@@ -1,0 +1,123 @@
+/* FileSift marketing site — shared styles */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f5f5f7;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --border: #e3e3e8;
+  --accent: #0a84ff;
+  --accent-press: #0060df;
+  --green: #34c759;
+  --purple: #af52de;
+  --radius: 16px;
+  --maxw: 1080px;
+  --shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 40px rgba(0,0,0,.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0c; --bg-alt: #161618; --text: #f5f5f7; --muted: #9a9aa0;
+    --border: #2a2a2e; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 40px rgba(0,0,0,.5);
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.5;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+header.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav .wrap { display: flex; align-items: center; gap: 20px; height: 60px; }
+.brand { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 18px; letter-spacing: -.02em; }
+.brand .mark { width: 26px; height: 26px; border-radius: 7px; background: linear-gradient(135deg, var(--accent), var(--purple)); display: grid; place-items: center; }
+.nav nav { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+.nav nav a { color: var(--muted); font-size: 15px; font-weight: 500; }
+.nav nav a:hover { color: var(--text); }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px;
+  padding: 9px 18px; border-radius: 980px; background: var(--accent); color: #fff;
+  transition: background .15s, transform .1s;
+}
+.btn:hover { background: var(--accent-press); }
+.btn:active { transform: scale(.98); }
+.btn.ghost { background: transparent; color: var(--accent); padding: 9px 12px; }
+
+/* Hero */
+.hero { text-align: center; padding: 80px 0 40px; }
+.hero h1 { font-size: clamp(40px, 7vw, 68px); line-height: 1.05; letter-spacing: -.03em; font-weight: 800; }
+.hero h1 .grad { background: linear-gradient(120deg, var(--accent), var(--purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p.sub { font-size: clamp(18px, 2.4vw, 23px); color: var(--muted); max-width: 40ch; margin: 22px auto 0; }
+.hero .cta { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
+.hero .note { margin-top: 14px; font-size: 13px; color: var(--muted); }
+
+/* Mac App Store badge */
+.mas-badge {
+  display: inline-flex; align-items: center; gap: 11px; background: #000; color: #fff;
+  padding: 11px 20px; border-radius: 12px; font-weight: 500;
+}
+.mas-badge .big { font-size: 19px; font-weight: 600; line-height: 1; }
+.mas-badge .small { font-size: 11px; letter-spacing: .02em; opacity: .85; line-height: 1.2; }
+@media (prefers-color-scheme: dark) { .mas-badge { background: #fff; color: #000; } }
+
+/* App mock */
+.mock-frame { margin: 56px auto 0; max-width: 940px; border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; border: 1px solid var(--border); }
+.mock-frame svg { display: block; width: 100%; height: auto; }
+
+/* Sections */
+section { padding: 72px 0; }
+section.alt { background: var(--bg-alt); }
+.section-head { text-align: center; max-width: 60ch; margin: 0 auto 44px; }
+.section-head h2 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -.02em; font-weight: 800; }
+.section-head p { color: var(--muted); font-size: 18px; margin-top: 12px; }
+
+/* Feature grid */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; }
+section.alt .card { background: var(--bg); }
+.card .ic { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; margin-bottom: 16px; background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.card h3 { font-size: 18px; letter-spacing: -.01em; }
+.card p { color: var(--muted); margin-top: 8px; font-size: 15px; }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 24px; counter-reset: step; }
+.step { text-align: center; }
+.step .num { width: 46px; height: 46px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; display: grid; place-items: center; margin: 0 auto 14px; }
+.step h3 { font-size: 18px; }
+.step p { color: var(--muted); margin-top: 6px; font-size: 15px; }
+
+/* Privacy banner */
+.privacy-banner { text-align: center; }
+.privacy-banner .lock { font-size: 40px; }
+.privacy-banner h2 { margin-top: 10px; }
+
+/* FAQ */
+.faq { max-width: 760px; margin: 0 auto; }
+.faq details { border-bottom: 1px solid var(--border); padding: 18px 4px; }
+.faq summary { font-weight: 600; font-size: 17px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--muted); font-weight: 400; font-size: 22px; }
+.faq details[open] summary::after { content: "–"; }
+.faq p { color: var(--muted); margin-top: 12px; font-size: 15.5px; }
+
+/* Doc page (privacy) */
+.doc { max-width: 720px; margin: 0 auto; padding: 56px 0; }
+.doc h1 { font-size: 36px; letter-spacing: -.02em; }
+.doc .updated { color: var(--muted); margin-top: 6px; }
+.doc h2 { font-size: 21px; margin-top: 34px; }
+.doc p { margin-top: 12px; color: var(--text); }
+.doc a { color: var(--accent); }
+
+/* Footer */
+footer.site { border-top: 1px solid var(--border); padding: 36px 0; color: var(--muted); font-size: 14px; }
+footer.site .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+footer.site nav { display: flex; gap: 20px; }
+footer.site a:hover { color: var(--text); }

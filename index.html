@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FileSift — Sort photos & files, fast</title>
+<meta name="description" content="FileSift is the fastest way to sort a folder of images, videos, and files on your Mac. Triage by keystroke, auto-sort by type, and review before anything moves. Private by design.">
+<meta property="og:title" content="FileSift — Sort photos & files, fast">
+<meta property="og:description" content="Triage a messy folder in minutes. Private by design — your files never leave your Mac.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://filesiftapp.com">
+<link rel="canonical" href="https://filesiftapp.com">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="mark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 7h6l2 2h8v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z" fill="#fff"/></svg>
+      </span>
+      FileSift
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="btn" href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Sort a messy folder<br><span class="grad">in minutes, not hours.</span></h1>
+      <p class="sub">FileSift is the fastest way to triage images, videos, and files on your Mac — by keystroke, by drag, or automatically by type.</p>
+      <div class="cta" id="download">
+        <a class="mas-badge" href="#" aria-label="Download on the Mac App Store">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-1.84-.92-3.03-.9-1.56.03-3 .91-3.8 2.3-1.62 2.82-.41 6.99 1.16 9.28.77 1.12 1.69 2.38 2.9 2.34 1.16-.05 1.6-.75 3-.75s1.8.75 3.03.72c1.25-.02 2.04-1.14 2.8-2.27.88-1.3 1.25-2.56 1.27-2.62-.03-.01-2.44-.94-2.46-3.72M14.46 4.5c.72-.87 1.2-2.08 1.07-3.28-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.46"/></svg>
+          <span><span class="small">Download on the</span><br><span class="big">Mac App Store</span></span>
+        </a>
+        <a class="btn ghost" href="#features">See how it works →</a>
+      </div>
+      <p class="note">Requires macOS 14 or later · Coming soon to the Mac App Store</p>
+
+      <!-- App mockup -->
+      <div class="mock-frame" aria-hidden="true">
+        <svg viewBox="0 0 940 560" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0a84ff"/><stop offset="1" stop-color="#af52de"/>
+            </linearGradient>
+          </defs>
+          <!-- window -->
+          <rect x="0" y="0" width="940" height="560" rx="14" fill="#f5f5f7"/>
+          <rect x="0" y="0" width="940" height="44" rx="14" fill="#e9e9ee"/>
+          <rect x="0" y="30" width="940" height="14" fill="#e9e9ee"/>
+          <circle cx="24" cy="22" r="6" fill="#ff5f57"/><circle cx="44" cy="22" r="6" fill="#febc2e"/><circle cx="64" cy="22" r="6" fill="#28c840"/>
+          <text x="470" y="27" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#86868b" font-weight="600">FileSift — gpt process</text>
+          <!-- sidebar -->
+          <rect x="0" y="44" width="240" height="516" fill="#ececf1"/>
+          <text x="20" y="78" font-family="-apple-system,sans-serif" font-size="11" fill="#8a8a90" font-weight="700">SOURCE</text>
+          <rect x="16" y="88" width="208" height="34" rx="8" fill="#0a84ff"/>
+          <text x="30" y="109" font-family="-apple-system,sans-serif" font-size="13" fill="#fff" font-weight="600">gpt process · 61</text>
+          <text x="20" y="150" font-family="-apple-system,sans-serif" font-size="11" fill="#8a8a90" font-weight="700">DESTINATIONS</text>
+          <g font-family="-apple-system,sans-serif" font-size="13" fill="#1d1d1f">
+            <rect x="16" y="160" width="208" height="30" rx="7" fill="#fff"/><circle cx="33" cy="175" r="5" fill="#34c759"/><text x="46" y="179">Keep</text><text x="210" y="179" text-anchor="end" fill="#8a8a90">[1]</text>
+            <rect x="16" y="196" width="208" height="30" rx="7" fill="#fff"/><circle cx="33" cy="211" r="5" fill="#ff3b30"/><text x="46" y="215">Delete</text><text x="210" y="215" text-anchor="end" fill="#8a8a90">[2]</text>
+            <rect x="16" y="232" width="208" height="30" rx="7" fill="#fff"/><circle cx="33" cy="247" r="5" fill="#af52de"/><text x="46" y="251">Edit later</text><text x="210" y="251" text-anchor="end" fill="#8a8a90">[3]</text>
+            <rect x="16" y="268" width="208" height="30" rx="7" fill="#fff"/><circle cx="33" cy="283" r="5" fill="#ff9f0a"/><text x="46" y="287">Archive</text><text x="210" y="287" text-anchor="end" fill="#8a8a90">[4]</text>
+          </g>
+          <rect x="16" y="508" width="208" height="36" rx="9" fill="#0a84ff"/>
+          <text x="120" y="531" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#fff" font-weight="700">Sort Now (28)</text>
+          <!-- grid of tiles -->
+          <g>
+            <!-- row 1 -->
+            <rect x="264" y="68" width="148" height="116" rx="10" fill="#cdd6e0"/><rect x="264" y="68" width="148" height="116" rx="10" fill="none" stroke="#34c759" stroke-width="3"/><rect x="272" y="160" width="30" height="18" rx="5" fill="#34c759"/>
+            <rect x="428" y="68" width="148" height="116" rx="10" fill="#d8cbb8"/>
+            <rect x="592" y="68" width="148" height="116" rx="10" fill="#c2b8d8"/><rect x="592" y="68" width="148" height="116" rx="10" fill="none" stroke="#af52de" stroke-width="3"/><rect x="600" y="160" width="30" height="18" rx="5" fill="#af52de"/>
+            <rect x="756" y="68" width="148" height="116" rx="10" fill="#cfd9d2"/>
+            <!-- row 2 -->
+            <rect x="264" y="196" width="148" height="116" rx="10" fill="#d6c7c2"/><rect x="264" y="196" width="148" height="116" rx="10" fill="none" stroke="#ff3b30" stroke-width="3"/><rect x="272" y="288" width="30" height="18" rx="5" fill="#ff3b30"/>
+            <rect x="428" y="196" width="148" height="116" rx="10" fill="#c8d2dd"/><rect x="428" y="196" width="148" height="116" rx="10" fill="none" stroke="#0a84ff" stroke-width="3.5"/>
+            <rect x="592" y="196" width="148" height="116" rx="10" fill="#d9d3c0"/><rect x="592" y="196" width="148" height="116" rx="10" fill="none" stroke="#34c759" stroke-width="3"/><rect x="600" y="288" width="30" height="18" rx="5" fill="#34c759"/>
+            <rect x="756" y="196" width="148" height="116" rx="10" fill="#c5bdd4"/>
+            <!-- row 3 -->
+            <rect x="264" y="324" width="148" height="116" rx="10" fill="#cdd6e0"/><rect x="264" y="324" width="148" height="116" rx="10" fill="none" stroke="#ff9f0a" stroke-width="3"/><rect x="272" y="416" width="30" height="18" rx="5" fill="#ff9f0a"/>
+            <rect x="428" y="324" width="148" height="116" rx="10" fill="#d8cbb8"/>
+            <rect x="592" y="324" width="148" height="116" rx="10" fill="#c2b8d8"/>
+            <rect x="756" y="324" width="148" height="116" rx="10" fill="#cfd9d2"/><rect x="756" y="324" width="148" height="116" rx="10" fill="none" stroke="#ff3b30" stroke-width="3"/><rect x="764" y="416" width="30" height="18" rx="5" fill="#ff3b30"/>
+            <!-- marquee selection rectangle -->
+            <rect x="420" y="316" width="170" height="132" rx="4" fill="#0a84ff" fill-opacity="0.12" stroke="#0a84ff" stroke-width="1.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Built for speed and trust</h2>
+        <p>Everything you need to clear a backlog of files — and nothing that gets in your way.</p>
+      </div>
+      <div class="features">
+        <div class="card">
+          <div class="ic">🗂️</div>
+          <h3>Two ways to sort</h3>
+          <p>Flip through one-up in <strong>Focus</strong>, or select many at once in the <strong>Grid</strong> contact sheet. They share the same plan — switch anytime.</p>
+        </div>
+        <div class="card">
+          <div class="ic">✨</div>
+          <h3>Auto-sort by type</h3>
+          <p>Let FileSift pre-sort everything by type or extension — Images, Videos, PDFs, Documents, and more. You review, then commit.</p>
+        </div>
+        <div class="card">
+          <div class="ic">⌨️</div>
+          <h3>Keyboard-fast</h3>
+          <p>Assign with number keys, browse with arrows, Quick Look with Space. Your hands never leave the keyboard.</p>
+        </div>
+        <div class="card">
+          <div class="ic">🖱️</div>
+          <h3>Marquee select</h3>
+          <p>Drag a rubber-band box across the grid to grab many files at once — just like Finder, but built for sorting.</p>
+        </div>
+        <div class="card">
+          <div class="ic">🏷️</div>
+          <h3>Move &amp; tag</h3>
+          <p>Move files into folders, apply native macOS Finder tags, or both. Save destination sets as reusable presets.</p>
+        </div>
+        <div class="card">
+          <div class="ic">↩️</div>
+          <h3>Safe by design</h3>
+          <p>Nothing moves until you press <strong>Sort Now</strong> and confirm. Undo anything, and pick up an unfinished plan later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="alt">
+    <div class="wrap">
+      <div class="section-head"><h2>Three steps</h2></div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Pick a folder</h3><p>Point FileSift at a Downloads pile, camera dump, or screenshots mess.</p></div>
+        <div class="step"><div class="num">2</div><h3>Sort it</h3><p>Assign with keys, clicks, or a marquee — or let Auto-sort do a first pass.</p></div>
+        <div class="step"><div class="num">3</div><h3>Commit</h3><p>Review the per-folder summary and press Sort Now. Done.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="privacy-banner">
+    <div class="wrap">
+      <div class="lock">🔒</div>
+      <h2>Your files never leave your Mac</h2>
+      <p class="sub" style="max-width:52ch;margin:14px auto 0;color:var(--muted);font-size:18px;">FileSift works entirely on your device. No account, no uploads, no tracking, no analytics. <a href="privacy.html" style="color:var(--accent)">Read the privacy policy →</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div class="section-head"><h2>Frequently asked</h2></div>
+      <div class="faq">
+        <details open><summary>Does FileSift copy or move my files?</summary><p>It <strong>moves</strong> them into the destinations you choose — and only after you press Sort Now and confirm the summary. If a name already exists at the destination, FileSift gives the file a unique name instead of overwriting.</p></details>
+        <details><summary>What file types does it handle?</summary><p>Images and videos by default. Flip on “Show all file types” to also sort PDFs, text, archives, and anything else — each shown with its system icon.</p></details>
+        <details><summary>Does it send my photos anywhere?</summary><p>No. Everything happens on your Mac. There’s no network connection, no account, and no analytics.</p></details>
+        <details><summary>Can I undo a mistake?</summary><p>Yes. Staged assignments are fully undoable before you commit, and your in-progress plan is saved if you quit and come back.</p></details>
+        <details><summary>What macOS do I need?</summary><p>macOS 14 (Sonoma) or later.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 FileSift</span>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:kevonticer@gmail.com">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
