@@ -46,19 +46,21 @@
     <div class="wrap">
       <div>
         <h1>Clean up a messy folder in minutes.</h1>
-        <p class="sub">Sort a cluttered folder into the right places fast — automatically by type, date, size, and more, or by hand, a whole grid at a time or one file up close. Move files into folders or tag them in place; nothing moves until you confirm.</p>
+        <p class="sub">Some files a rule can sort. The rest need your eyes. FileSift shows you each one big — press a number key and it's filed, that instant. You always see where each file went — and ⌘Z really brings it back.</p>
         <div class="cta" id="download">
           <a class="mas-badge" href="#" aria-label="Download on the Mac App Store">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-1.84-.92-3.03-.9-1.56.03-3 .91-3.8 2.3-1.62 2.82-.41 6.99 1.16 9.28.77 1.12 1.69 2.38 2.9 2.34 1.16-.05 1.6-.75 3-.75s1.8.75 3.03.72c1.25-.02 2.04-1.14 2.8-2.27.88-1.3 1.25-2.56 1.27-2.62-.03-.01-2.44-.94-2.46-3.72M14.46 4.5c.72-.87 1.2-2.08 1.07-3.28-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.46"/></svg>
-            <span><span class="small">Download on the</span><br><span class="big">Mac App Store</span></span>
-          </a>
+          <picture>
+            <source srcset="img/mac-app-store-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="img/mac-app-store-black.svg" alt="Download on the Mac App Store" width="156" height="40">
+          </picture>
+        </a>
           <a class="link-arrow" href="#ways">See how it works</a>
         </div>
         <p class="note">Requires macOS 14 or later · Coming soon to the Mac App Store</p>
       </div>
 
       <div>
-        <img class="appshot" src="shot-grid.webp" alt="FileSift in Grid view — a folder of photos shown as a contact sheet, several already assigned to colored destinations">
+        <img class="appshot" src="shot-grid.webp" alt="FileSift in Grid view — a folder of photos shown as a contact sheet, several already sorted and dimmed with badges showing where each went">
       </div>
     </div>
   </section>
@@ -92,50 +94,51 @@
       <div class="section-head"><h2>How it works</h2></div>
       <div class="steps">
         <div class="step"><div class="num">1</div><h3>Open a folder</h3><p>Point FileSift at the folder you want to clean up.</p></div>
-        <div class="step"><div class="num">2</div><h3>Sort it, fast</h3><p>Auto-sort by type, date, size, and more — or do it by hand in Grid (many at once) or Focus (one up close). Move files into folders, or tag them in place.</p></div>
-        <div class="step"><div class="num">3</div><h3>Review, then Sort Now</h3><p>Nothing has moved yet. Check the plan, press Sort Now, and FileSift files everything at once.</p></div>
+        <div class="step"><div class="num">2</div><h3>Sort it, fast</h3><p>Auto-sort by type, date, size, and more — or do it by hand in Grid (many at once) or Focus (one up close). Each press files it on the spot and jumps to the next.</p></div>
+        <div class="step"><div class="num">3</div><h3>Change your mind, safely</h3><p>Sorted files stay on screen, showing where each one went. ⌘Z moves one right back; "Put Back All Moves" reverses the whole session.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Value rows -->
+  <!-- Value rows — ordered by user story: judgment → trust → machine pass → piles -->
   <section>
     <div class="wrap">
       <div class="row">
         <div class="row-text">
-          <div class="ic"><svg class="icon" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg></div>
-          <h3>Sort a whole folder at once</h3>
-          <p>Grid lays your files out as a contact sheet. Grab a bunch at a time — drag a box around them, shift-click a range, or move with the arrow keys — then send the whole group to a folder or tag in one move.</p>
-          <p class="reassure">Nothing moves until you review and confirm.</p>
-        </div>
-        <div class="row-visual"><img class="appshot" src="shot-grid.webp" alt="FileSift in Grid view — files laid out as a contact sheet with colored assignment badges, ready to sort in bulk"></div>
-      </div>
-
-      <div class="row">
-        <div class="row-text">
           <div class="ic"><svg class="icon" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
-          <h3>Get a closer look with Focus</h3>
-          <p>When detail matters, Focus shows one image or video at a time in a large preview — so you can really see what you're deciding on before you file it.</p>
+          <h3>Decide with your eyes, file with one key</h3>
+          <p>Focus shows each photo, video, or document big enough to actually judge — the calls no rule can make. Press 1–9 and it's in that folder; FileSift brings up the next one before your hand moves.</p>
         </div>
         <div class="row-visual"><img class="appshot" src="shot-focus.webp" alt="FileSift in Focus view — a single photo shown large with a filmstrip of the other files along the bottom"></div>
       </div>
 
       <div class="row">
         <div class="row-text">
+          <div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg></div>
+          <h3>Always know where your files went</h3>
+          <p>Sorted files don't vanish — the tile stays behind, dimmed, with a badge showing exactly where it went. Sorting by hand and misfiled one? <strong>⌘Z</strong> physically walks it back where it came from, one at a time, as far as you need.</p>
+          <p>Auto-sorted a whole folder and want it undone? <strong>Put Back All Moves</strong> reverses the entire batch in a single step — every file home, exactly where it started.</p>
+          <p class="reassure">Fast doesn't have to mean nervous.</p>
+        </div>
+        <div class="row-visual"><img class="appshot" src="shot-done.webp" alt="FileSift showing 'All moved — 76 files' with folder door cards above the dimmed markers of the sorted files"></div>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
           <div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div>
-          <h3>Sort it automatically</h3>
-          <p>Auto-sort organizes a folder by type, date, month, size, orientation, or extension — FileSift sorts the files and builds the folders for you. Review the result, then Sort Now.</p>
+          <h3>Let auto-sort take the first pass</h3>
+          <p>Group a whole folder by type, date, size, orientation, or extension in one move — preview the plan, confirm, done. The machine handles the obvious 80%; you spend your attention on the files that need it.</p>
         </div>
         <div class="row-visual"><div class="shot"><img src="shot-autosort.webp" alt="FileSift's Auto-sort menu open, offering to group a folder by type, year, month, file size, orientation, or extension"></div></div>
       </div>
 
       <div class="row">
         <div class="row-text">
-          <div class="ic"><svg class="icon" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/></svg></div>
-          <h3>Sort with the number keys</h3>
-          <p>In both Grid and Focus, press 1 through 9 to send a file to a destination — FileSift jumps to the next one automatically, so you can clear a whole backlog at speed.</p>
+          <div class="ic"><svg class="icon" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg></div>
+          <h3>Four hundred files? Deal in handfuls.</h3>
+          <p>Grid lays the whole pile out as a contact sheet. Drag a box around a batch, shift-click a range, or sweep with the arrow keys — then one keystroke files the lot. All the selection moves your Mac hands already know.</p>
         </div>
-        <div class="row-visual"><img class="appshot" src="shot-done.webp" alt="FileSift showing 'All files staged — 76 files ready to sort' with a green checkmark, after a folder was cleared"></div>
+        <div class="row-visual"><img class="appshot" src="shot-grid.webp" alt="FileSift in Grid view — files laid out as a contact sheet, a selected group about to be sorted in one move"></div>
       </div>
     </div>
   </section>
@@ -155,8 +158,9 @@
       <div class="section-head"><h2>Questions</h2></div>
       <div class="faq">
         <details open><summary>Does it move or copy my files?</summary><p>It moves them into the folders you choose. If you'd rather not move anything, use tags instead — your files stay exactly where they are and just get a macOS Finder tag.</p></details>
-        <details><summary>What kinds of files can it sort?</summary><p>Images and videos out of the box, with the option to include every other file type too — PDFs, documents, and anything else on your Mac.</p></details>
-        <details><summary>What if I change my mind?</summary><p>Nothing is moved until you confirm, and you can undo. You stay in control the whole way through.</p></details>
+        <details><summary>What kinds of files can it sort?</summary><p>Everything in the folder — photos and video with rich previews, plus PDFs, audio, text, documents, and any other file on your Mac.</p></details>
+        <details><summary>What if I change my mind?</summary><p>Undo really undoes: ⌘Z physically moves the last file back — press it as many times as you need — and "Put Back All Moves" reverses an entire session. Sorted files stay on screen, so you can always see where everything went (and send one somewhere else with a keypress).</p></details>
+        <details><summary>Do I have to set up my folders every time?</summary><p>No — save any destination set as a preset and apply it to the next folder in one click, so a routine cleanup (Downloads, camera dumps) starts ready to go. FileSift also remembers each folder's destinations automatically.</p></details>
         <details><summary>What do I need to run it?</summary><p>A Mac running macOS 14 (Sonoma) or later.</p></details>
         <details><summary>Found a bug, or want to get in touch?</summary><p>Use <strong>Report a Bug</strong> in the app (in the sidebar and the Help menu), or email <a href="mailto:filesiftapp@fastmail.com">filesiftapp@fastmail.com</a>. A report includes only non-identifying diagnostics — app version, basic state, and the app's recent log — never your file names or a screenshot, and nothing is sent until you review and approve it.</p></details>
       </div>
@@ -170,8 +174,10 @@
       <p>Sort the folder that's been bugging you — into folders, or with tags.</p>
       <div class="cta">
         <a class="mas-badge" href="#" aria-label="Download on the Mac App Store">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-1.84-.92-3.03-.9-1.56.03-3 .91-3.8 2.3-1.62 2.82-.41 6.99 1.16 9.28.77 1.12 1.69 2.38 2.9 2.34 1.16-.05 1.6-.75 3-.75s1.8.75 3.03.72c1.25-.02 2.04-1.14 2.8-2.27.88-1.3 1.25-2.56 1.27-2.62-.03-.01-2.44-.94-2.46-3.72M14.46 4.5c.72-.87 1.2-2.08 1.07-3.28-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.46"/></svg>
-          <span><span class="small">Download on the</span><br><span class="big">Mac App Store</span></span>
+          <picture>
+            <source srcset="img/mac-app-store-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="img/mac-app-store-black.svg" alt="Download on the Mac App Store" width="156" height="40">
+          </picture>
         </a>
       </div>
       <p class="note">macOS 14 or later · One-time purchase · Coming soon</p>

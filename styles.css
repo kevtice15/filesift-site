@@ -43,22 +43,27 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
 
 /* nav */
 header.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 82%, transparent); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--line); }
-.nav .wrap { display: flex; align-items: center; gap: 20px; height: 62px; }
-.brand { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 800; font-size: 18px; }
+.nav .wrap { display: flex; align-items: center; gap: 20px; height: 62px; min-width: 0; }
+.brand { display: flex; align-items: center; gap: 9px; flex-shrink: 0; margin-right: auto; font-family: var(--font-display); font-weight: 800; font-size: 18px; }
 .brand-icon { width: 28px; height: 28px; border-radius: 7px; display: block; }
 .nav nav { margin-left: auto; display: flex; gap: 24px; align-items: center; }
 .nav nav a:not(.btn) { color: var(--ink-soft); font-size: 15px; font-weight: 500; }
 .nav nav a:not(.btn):hover { color: var(--ink); }
 /* On narrow screens the brand + two links + CTA cram the fixed-height row.
    Drop the secondary text links and keep brand + the Mac App Store button. */
-@media (max-width: 600px) {
-  .nav .wrap { gap: 12px; }
-  .nav nav { gap: 14px; }
+@media (max-width: 860px) {
+  .nav .wrap { gap: 10px; }
+  .nav nav { gap: 12px; margin-left: 0; }
+  /* Drop the text links; keep brand + the App Store button, which stays on one line. */
   .nav nav a:not(.btn) { display: none; }
+}
+@media (max-width: 480px) {
+  /* On phones even brand + pill can overflow; the hero badge is the CTA here. */
+  .nav nav a.btn { display: none; }
 }
 
 /* buttons */
-.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 15px; padding: 11px 20px; border-radius: 980px; background: var(--accent); color: #fff; transition: background .15s, transform .08s; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 15px; padding: 11px 20px; border-radius: 980px; background: var(--accent); color: #fff; white-space: nowrap; flex-shrink: 0; transition: background .15s, transform .08s; }
 .btn:hover { background: var(--accent-press); }
 .btn:active { transform: scale(.98); }
 .btn.small { padding: 9px 18px; font-size: 14px; }
@@ -66,11 +71,10 @@ header.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srg
 .link-arrow:hover { gap: 9px; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-/* Mac App Store badge */
-.mas-badge { display: inline-flex; align-items: center; gap: 11px; background: #000; color: #fff; padding: 11px 20px; border-radius: 12px; }
-.mas-badge .big { font-family: var(--font-display); font-size: 19px; font-weight: 600; line-height: 1; }
-.mas-badge .small { font-size: 11px; letter-spacing: .02em; opacity: .85; line-height: 1.2; }
-@media (prefers-color-scheme: dark) { .mas-badge { background: #fff; color: #000; } }
+/* Mac App Store badge — official Apple lockup (black on light, white on dark) */
+.mas-badge { display: inline-flex; }
+.mas-badge img { height: 44px; width: auto; display: block; }
+@media (max-width: 400px) { .mas-badge img { height: 40px; } }
 
 /* hero */
 .hero { padding: 84px 0 56px; }
