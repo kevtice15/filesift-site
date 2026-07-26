@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sort files with your keyboard on Mac — FileSift</title>
+<meta name="description" content="Move files into folders with a single keypress on your Mac. What Finder's keyboard shortcuts can and can't do, and how FileSift turns file sorting into one key per file — with real undo.">
+<meta property="og:title" content="Sort files with your keyboard on Mac — FileSift">
+<meta property="og:description" content="One keypress per file: press a number, the file moves to that folder, the next one's already up. Real ⌘Z undo included.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://filesiftapp.com/sort-files-keyboard.html">
+<meta property="og:image" content="https://filesiftapp.com/icon.png">
+<link rel="canonical" href="https://filesiftapp.com/sort-files-keyboard.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script src="analytics.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I move files with keyboard shortcuts in Finder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly. Finder can move a file to the Trash with ⌘⌫, and you can cut-and-paste a file with ⌘C then ⌥⌘V — but that still means navigating to the destination folder for every file. There's no built-in way to say \"send this file to that folder\" with one key, which is the gap FileSift fills."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does keyboard sorting work in FileSift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You set up destination folders once — each gets a number key. Then you go through the folder one file at a time: press the number, the file physically moves to that folder, and the next file is already on screen. Space previews, S skips, ⌘Z physically moves the last file back."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I press the wrong key?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "⌘Z really undoes it: the file physically moves back where it was, as many steps back as you need. \"Put Back All Moves\" reverses an entire session at once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work for any file type?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — photos and video get rich previews, and PDFs, audio, text, and any other file can be sorted the same way. If it's in the folder, a keypress can move it."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img class="brand-icon" src="icon.png" width="28" height="28" alt="">
+      FileSift
+    </a>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="features.html">Features</a>
+      <a href="ai-generations.html">AI images</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="btn small" href="https://apps.apple.com/us/app/filesift/id6783454559" target="_blank" rel="noopener">Mac App Store</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Hands on the keys</span>
+        <h1>Sort files with your keyboard.</h1>
+        <p class="sub">Press a number, the file moves to that folder, the next one's already up. FileSift turns clearing a folder into one keypress per file — no dragging, no window juggling, and ⌘Z really brings files back.</p>
+        <div class="cta" id="download">
+          <a class="mas-badge" href="https://apps.apple.com/us/app/filesift/id6783454559" aria-label="Download FileSift on the Mac App Store" target="_blank" rel="noopener">
+          <picture>
+            <source srcset="img/mac-app-store-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="img/mac-app-store-black.svg" alt="Download on the Mac App Store" width="156" height="40">
+          </picture>
+        </a>
+          <a class="link-arrow" href="#how">See how it works</a>
+        </div>
+        <p class="note">Requires macOS 14 or later · On the Mac App Store</p>
+      </div>
+
+      <div>
+        <img class="appshot" src="shot-focus.webp" alt="FileSift in Focus view — one photo shown large with numbered destination folders across the top, ready to be sorted with a keypress">
+      </div>
+    </div>
+  </section>
+
+  <!-- What Finder can and can't do -->
+  <section id="finder">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The honest starting point</span>
+        <h2>What Finder's keyboard can do — and where it stops</h2>
+        <p>Finder has more keyboard power than most people use. If you just need to move a handful of files, these get you there:</p>
+      </div>
+      <div class="duo">
+        <div class="panel">
+          <h3>Built into Finder</h3>
+          <p><strong>⌘⌫</strong> moves the selection to the Trash. <strong>⌘C</strong> then <strong>⌥⌘V</strong> cuts and pastes a file into the frontmost window. <strong>⇧⌘N</strong> makes a new folder. Arrow keys plus <strong>⌘O</strong> and Space (Quick Look) let you inspect before you act.</p>
+        </div>
+        <div class="panel">
+          <h3>Where it stops</h3>
+          <p>There's no "send this file to <em>that</em> folder" key. Every move means navigating to the destination — a new window or tab, a drag, or a paste — once per file. Fine for five files. Painful for a Downloads folder with three hundred.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="alt">
+    <div class="wrap">
+      <div class="section-head"><h2>One key per file</h2></div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Set up destinations once</h3><p>Add the folders you're sorting into — Keep, Archive, a project folder. Each gets a number key. Save the set as a preset for next time.</p></div>
+        <div class="step"><div class="num">2</div><h3>Press the number</h3><p>Each file shows big. Press its number and it physically moves to that folder — the next file is already on screen. Space previews, S skips.</p></div>
+        <div class="step"><div class="num">3</div><h3>⌘Z means it</h3><p>Undo physically moves the last file back, as many times as you need. "Put Back All Moves" reverses the whole session.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value rows -->
+  <section>
+    <div class="wrap">
+      <div class="row">
+        <div class="row-text">
+          <div class="ic"><svg class="icon" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+          <h3>See what you're sorting</h3>
+          <p>Every file shows in a large preview as you go — photos, video, PDFs, audio, text. You're deciding with your eyes on the file, not on a filename.</p>
+        </div>
+        <div class="row-visual"><img class="appshot" src="shot-metadata.webp" alt="FileSift showing a large image preview with its details panel beside it"></div>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg></div>
+          <h3>Sorted files stay visible</h3>
+          <p>Files you've sorted stay on screen, dimmed, with a marker showing where each went — so you always know what happened, and any of them is one right-click from coming back.</p>
+        </div>
+        <div class="row-visual"><img class="appshot" src="shot-done.webp" alt="FileSift's end-of-session view: folder cards above the dimmed markers of sorted files"></div>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Or tag instead of moving</h3>
+          <p>A destination can apply a macOS Finder tag instead of (or as well as) moving — same keypress, but the file stays put and just gets categorized in place.</p>
+        </div>
+        <div class="row-visual"><img class="appshot" src="shot-grid.webp" alt="FileSift in Grid view with color-coded destination chips along the top"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div class="section-head"><h2>Questions</h2></div>
+      <div class="faq">
+        <details open><summary>Can I move files with keyboard shortcuts in Finder?</summary><p>Partly. Finder can move a file to the Trash with ⌘⌫, and you can cut-and-paste a file with ⌘C then ⌥⌘V — but that still means navigating to the destination folder for every file. There's no built-in way to say "send this file to <em>that</em> folder" with one key, which is the gap FileSift fills.</p></details>
+        <details><summary>How does keyboard sorting work in FileSift?</summary><p>You set up destination folders once — each gets a number key. Then you go through the folder one file at a time: press the number, the file physically moves to that folder, and the next file is already on screen. Space previews, S skips, ⌘Z physically moves the last file back.</p></details>
+        <details><summary>What if I press the wrong key?</summary><p>⌘Z really undoes it: the file physically moves back where it was, as many steps back as you need. "Put Back All Moves" reverses an entire session at once.</p></details>
+        <details><summary>Does it work for any file type?</summary><p>Yes — photos and video get rich previews, and PDFs, audio, text, and any other file can be sorted the same way. If it's in the folder, a keypress can move it.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section>
+    <div class="wrap final">
+      <h2>Your hands never leave the keyboard.</h2>
+      <p>Point FileSift at the messiest folder you have and clear it tonight.</p>
+      <div class="cta">
+        <a class="mas-badge" href="https://apps.apple.com/us/app/filesift/id6783454559" aria-label="Download FileSift on the Mac App Store" target="_blank" rel="noopener">
+          <picture>
+            <source srcset="img/mac-app-store-white.svg" media="(prefers-color-scheme: dark)">
+            <img src="img/mac-app-store-black.svg" alt="Download on the Mac App Store" width="156" height="40">
+          </picture>
+        </a>
+      </div>
+      <p class="note">Requires macOS 14 or later · On the Mac App Store</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 FileSift</span>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="features.html">Features</a>
+      <a href="organize-screenshots.html">Screenshots</a>
+      <a href="ai-images-guide.html">AI images guide</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:filesiftapp@fastmail.com">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

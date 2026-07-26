@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What to do with thousands of AI-generated images — a Mac guide</title>
+<meta name="description" content="Your outputs folder has thousands of Stable Diffusion, ComfyUI, or Draw Things images. A practical Mac workflow: decide what to keep, a folder structure that scales, and how to triage a batch in minutes.">
+<meta property="og:title" content="What to do with thousands of AI-generated images — a Mac guide">
+<meta property="og:description" content="A practical workflow for the generation pile: what to keep, how to structure folders, and how to triage a batch in minutes on your Mac.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://filesiftapp.com/ai-images-guide.html">
+<meta property="og:image" content="https://filesiftapp.com/icon.png">
+<link rel="canonical" href="https://filesiftapp.com/ai-images-guide.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script src="analytics.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What to do with thousands of AI-generated images — a Mac guide",
+  "description": "A practical workflow for organizing large batches of AI-generated images on a Mac: what to keep, a folder structure that scales, and how to triage a batch in minutes.",
+  "url": "https://filesiftapp.com/ai-images-guide.html",
+  "image": "https://filesiftapp.com/icon.png",
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "author": { "@type": "Organization", "name": "FileSift", "url": "https://filesiftapp.com" }
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img class="brand-icon" src="icon.png" width="28" height="28" alt="">
+      FileSift
+    </a>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="features.html">Features</a>
+      <a href="ai-generations.html">AI images</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="btn small" href="https://apps.apple.com/us/app/filesift/id6783454559" target="_blank" rel="noopener">Mac App Store</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="doc">
+    <h1>What to do with thousands of AI-generated images</h1>
+    <p class="updated">A practical Mac workflow · Updated July 25, 2026</p>
+
+    <p>Generating images is so cheap that everyone who runs Stable Diffusion, ComfyUI, or Draw Things eventually hits the same wall: an outputs folder with thousands of files, no idea what's in there anymore, and a vague guilt about the disk space. This is a practical workflow for digging out — and staying out.</p>
+
+    <h2>Why the pile happens</h2>
+    <p>The tools are built to generate, not to organize. Automatic1111 drops everything into dated subfolders under <code>outputs/</code>; ComfyUI numbers files into one flat <code>output/</code> folder; Draw Things keeps a library you export from. None of them asks whether an image was any good — the misses land next to the keepers, forever, in filename order.</p>
+    <p>The result is a folder where the only way to find last month's good batch is to scrub through everything around it. The fix isn't a better viewer; it's a one-time triage plus a small habit.</p>
+
+    <h2>Step 1 — Decide what "keep" actually means</h2>
+    <p>Three buckets cover almost everyone:</p>
+    <p><strong>Keepers</strong> — the images you'd post, print, use in a project, or train from. For most people this is well under 5% of a batch.</p>
+    <p><strong>Reference</strong> — not portfolio material, but the settings matter: a composition worth rerunning, a style test, a seed you'll want again. Here's the useful part: for images from Automatic1111, Forge, ComfyUI, and Draw Things, <em>the recipe travels inside the file</em> — prompt, negative prompt, seed, model, sampler, all embedded in the PNG or JPEG. A reference image is a saved recipe.</p>
+    <p><strong>Everything else</strong> — misses, near-duplicates, six-fingered hands. This is the bucket that makes triage feel safe: because your keepers and references carry their own generation settings, deleting the rest costs you almost nothing. You're not losing work; you're deleting the takes that didn't land.</p>
+
+    <h2>Step 2 — A folder structure that scales</h2>
+    <p>Organize by <strong>project, not by tool or date</strong> — the tools already did date-and-tool, and that's exactly the structure that stopped working. Something like:</p>
+    <p><code>AI Art / ProjectName / keepers</code><br>
+       <code>AI Art / ProjectName / reference</code><br>
+       <code>AI Art / _style-tests</code></p>
+    <p>Two rules keep it honest. First, the outputs folder is an <em>inbox</em>, not an archive — things leave it, they don't live there. Second, don't over-nest: if filing an image takes more than one decision, you'll stop filing.</p>
+
+    <h2>Step 3 — The triage pass</h2>
+    <p>Go through the backlog in sittings, newest first — recent batches are the ones you actually remember and use. Sweep the obvious rejects in bulk first (any grid view where you can select a run of misses and delete them together), then make the keep/reference calls one image at a time, big enough to actually judge.</p>
+    <p>The pace matters more than the method: a keep-or-toss call should take about a second. If you're hesitating, that's what a Maybe folder is for — decide once, move on, and let the second pass through Maybe be short.</p>
+
+    <h2>The tools for the job (honestly)</h2>
+    <p><strong>Finder + Quick Look</strong> works for a hundred images: arrows to move, Space to peek, drag to file. It breaks down at a thousand — every move is a drag, nothing shows you the prompt, and one mis-drop into the wrong folder is silent.</p>
+    <p><strong>Your generator's own browser</strong> — the A1111 image-browser extension, ComfyUI gallery nodes — shows metadata but lives inside the web UI, only sees that tool's outputs, and doesn't file anything into your real folders.</p>
+    <p><strong>Diffusion Toolkit</strong> is the mature library manager for this — scan, search, tag by metadata — but it's Windows-only.</p>
+    <p><strong><a href="ai-generations.html">FileSift</a></strong> is our tool, and the Mac-native way to do the triage pass itself: each image shows big with its embedded prompt, seed, and model beside it, one number key files it (or trashes it), and ⌘Z physically moves it back if you change your mind. It reads Automatic1111, Forge, ComfyUI (including Flux), and Draw Things metadata; Midjourney and ChatGPT images sort just as fast but don't carry a readable prompt to show. Everything happens locally — nothing is uploaded.</p>
+
+    <h2>Step 4 — Keep it from happening again</h2>
+    <p>The habit that sticks: triage <em>per session</em>, while you still remember why you generated the batch. End of a prompting session, five minutes, outputs folder back to empty. If you keep destination folders consistent (a saved preset helps), the decision cost drops to almost nothing — and the pile never comes back.</p>
+    <p>Back up the keepers and reference folders like real work, because they are. The outputs inbox needs no backup: anything still in it is, by definition, undecided.</p>
+
+    <h2>The short version</h2>
+    <p>Keepers, reference, gone — three buckets. File by project. Sweep rejects in bulk, judge the rest one at a time with the metadata visible. Triage each session while it's fresh. Your keepers carry their own recipes, so delete without fear.</p>
+
+    <p class="note">FileSift is a native Mac app for exactly this — <a href="ai-generations.html">see how it works on AI images</a>, or find it on the <a href="https://apps.apple.com/us/app/filesift/id6783454559" target="_blank" rel="noopener">Mac App Store</a>. Requires macOS 14 or later.</p>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 FileSift</span>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="ai-generations.html">AI images</a>
+      <a href="sort-files-keyboard.html">Keyboard sorting</a>
+      <a href="organize-screenshots.html">Screenshots</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:filesiftapp@fastmail.com">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
