@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FileSift — Sort your AI image generations on your Mac</title>
-<meta name="description" content="A fast Mac app for going through AI image generations: keep the good ones, delete the rest with a keypress, and see each image's prompt, seed, and model as you go. Works with Automatic1111, ComfyUI, and Draw Things.">
-<meta property="og:title" content="Sort your AI image generations on your Mac — FileSift">
+<title>FileSift — Sort &amp; organize your AI image generations on Mac</title>
+<meta name="description" content="A fast Mac app for organizing AI-generated images: go through your outputs folder, keep the good ones, delete the rest with a keypress — with each image's prompt, seed, and model right there. Works with Automatic1111, ComfyUI, Forge, and Draw Things.">
+<meta property="og:title" content="Sort &amp; organize your AI image generations on Mac — FileSift">
 <meta property="og:description" content="Keep the good ones, delete the rest — one keypress each, with the prompt and seed right there. Nothing leaves your Mac.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://filesiftapp.com/ai-generations.html">
@@ -20,6 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script src="analytics.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,6 +33,22 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Images from Automatic1111, Forge, ComfyUI (including Flux), and Draw Things carry their prompt and settings inside the file, and FileSift shows them beside the image. Midjourney and ChatGPT don't embed a readable prompt, so those images sort just fine but without the generation details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I view a Stable Diffusion image's prompt without opening the web UI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. FileSift reads the generation metadata straight from the PNG or JPEG file, so you can see any image's prompt, seed, model, and sampler without Automatic1111 or ComfyUI running — no PNG Info tab, no Python. It works on any folder of images in Finder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I organize thousands of AI-generated images?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set up a few destination folders once — Keep, Maybe, Trash, or per-project — then go through the batch with the number keys, one image per keypress, or select whole groups in the grid. Sorting a few hundred images takes minutes, every move is undoable, and your destination set can be saved as a preset for the next batch."
       }
     },
     {
@@ -94,8 +112,8 @@
     <div class="wrap">
       <div>
         <span class="eyebrow">For AI image &amp; video creators</span>
-        <h1>Keep the good ones. Delete the rest.</h1>
-        <p class="sub">You generate hundreds of AI images — most are misses. FileSift shows each one big; one keypress keeps or trashes it, with the prompt and seed right there. Nothing leaves your Mac.</p>
+        <h1>Sort your AI generations. Keep the good ones.</h1>
+        <p class="sub">Your outputs folder fills with hundreds of images — most are misses. FileSift shows each one big; one keypress keeps or trashes it, with the prompt and seed right there. Nothing leaves your Mac.</p>
         <div class="cta" id="download">
           <a class="mas-badge" href="https://apps.apple.com/us/app/filesift/id6783454559" aria-label="Download FileSift on the Mac App Store" target="_blank" rel="noopener">
           <picture>
@@ -119,8 +137,8 @@
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Built for the generation pile</span>
-        <h2>You make more than you can keep.</h2>
-        <p>Midjourney, Stable Diffusion, ComfyUI, Flux, Draw Things — an afternoon of prompting can fill a folder with hundreds of images, and most aren't the ones you'll keep. FileSift is the fast way to go through the batch and pull out the good ones.</p>
+        <h2>Organize your ComfyUI, Automatic1111, and Draw Things outputs.</h2>
+        <p>An afternoon of prompting — Stable Diffusion, ComfyUI, Flux, Draw Things, Midjourney — can fill your outputs folder with hundreds of images, and most aren't the ones you'll keep. FileSift is the fast way to go through the batch and pull out the good ones.</p>
       </div>
     </div>
   </section>
@@ -144,8 +162,8 @@
       <div class="row">
         <div class="row-text">
           <div class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></div>
-          <h3>See how each one was made</h3>
-          <p>For images from <strong>Automatic1111</strong>, <strong>Forge</strong>, <strong>ComfyUI</strong> (including Flux), and <strong>Draw Things</strong>, FileSift reads the generation data baked into the file and shows it beside the image — the prompt, negative prompt, seed, model, and sampler.</p>
+          <h3>See the prompt while you sort</h3>
+          <p>For images from <strong>Automatic1111</strong>, <strong>Forge</strong>, <strong>ComfyUI</strong> (including Flux), and <strong>Draw Things</strong>, FileSift reads the generation metadata baked into the file and shows it beside the image — the prompt, negative prompt, seed, model, and sampler. No web UI running, no PNG Info tab.</p>
           <p>Compare two takes, copy a prompt to rerun it, or keep the one with the settings you liked — without opening anything else.</p>
         </div>
         <div class="row-visual"><img class="appshot" src="shot-metadata.webp" alt="FileSift in Focus view — a landscape generated in Draw Things shown large, with a 'Generated with' panel beside it listing the prompt, seed, model, and sampler"></div>
@@ -186,6 +204,8 @@
       <div class="section-head"><h2>Questions</h2></div>
       <div class="faq">
         <details open><summary>Which tools' generation details can it read?</summary><p>Images from Automatic1111, Forge, ComfyUI (including Flux), and Draw Things carry their prompt and settings inside the file, and FileSift shows them beside the image. Midjourney and ChatGPT don't embed a readable prompt, so those images sort just fine but without the generation details.</p></details>
+        <details><summary>Can I view a Stable Diffusion image's prompt without opening the web UI?</summary><p>Yes. FileSift reads the generation metadata straight from the PNG or JPEG file, so you can see any image's prompt, seed, model, and sampler without Automatic1111 or ComfyUI running — no PNG Info tab, no Python. It works on any folder of images in Finder.</p></details>
+        <details><summary>How do I organize thousands of AI-generated images?</summary><p>Set up a few destination folders once — Keep, Maybe, Trash, or per-project — then go through the batch with the number keys, one image per keypress, or select whole groups in the grid. Sorting a few hundred images takes minutes, every move is undoable, and your destination set can be saved as a preset for the next batch.</p></details>
         <details><summary>Does it upload my images or prompts anywhere?</summary><p>No. Everything is read and sorted on your Mac. Nothing is sent, tracked, or stored off your device — your prompts and unreleased work stay yours.</p></details>
         <details><summary>What file types does it handle?</summary><p>PNG and JPEG generations with rich previews, plus video (MP4/MOV) and any other file that happens to be in the folder.</p></details>
         <details><summary>Can I sort into keep, maybe, and trash folders?</summary><p>Yes. Set up your destination folders once (you can save them as a preset), then a single number key sends each image where it goes.</p></details>
